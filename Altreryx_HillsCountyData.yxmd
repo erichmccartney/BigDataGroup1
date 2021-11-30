@@ -1,0 +1,1411 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.1">
+  <Nodes>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1376" y="356" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="SiteZip" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="SchoolZipCodeGroup" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1472" y="272" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_47269aa9e5a442519985f73cc5d70975_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1577" y="305" width="168" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Write Data Files</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1602" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">../SDM_Project_HillsboroughCountyRealestate/HillsboroughCountyData.csv</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>HillsboroughCountyData.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="55" width="1284" height="324" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Property Appraiser Data Wrangling</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+            <Position x="79" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Directory>../SDM_Project_HillsboroughCountyRealestate/InputData/REAL ESTATE DATA</Directory>
+              <FileSpec>*.*</FileSpec>
+              <IncludeSubDirs value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dir ../SDM_Project_HillsboroughCountyRealestate/InputData/REAL ESTATE DATA\*.*</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="488" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Strap" selected="True" />
+                <Field field="Folio" selected="True" />
+                <Field field="PIN" selected="True" />
+                <Field field="PropertyType" selected="True" />
+                <Field field="Owner1" selected="True" />
+                <Field field="Owner2" selected="True" />
+                <Field field="MailingAddress1" selected="True" />
+                <Field field="MailingAddress2" selected="True" />
+                <Field field="MailingCity" selected="True" />
+                <Field field="MailingState" selected="True" />
+                <Field field="MailingZip" selected="True" />
+                <Field field="MailingCountry" selected="True" />
+                <Field field="SiteAddress" selected="True" />
+                <Field field="SiteCity" selected="True" />
+                <Field field="SiteZip" selected="True" />
+                <Field field="Acreage" selected="True" />
+                <Field field="Homestead" selected="True" />
+                <Field field="Legal1" selected="True" />
+                <Field field="Legal2" selected="True" />
+                <Field field="Legal3" selected="True" />
+                <Field field="Legal4" selected="True" />
+                <Field field="Subdivision" selected="True" />
+                <Field field="Neighborhood" selected="True" />
+                <Field field="TaxDistrict" selected="True" />
+                <Field field="Municipality" selected="True" />
+                <Field field="TotalNumBuildings" selected="True" />
+                <Field field="TotalUnits" selected="True" />
+                <Field field="TotalStories" selected="True" />
+                <Field field="TotalBedrooms" selected="True" />
+                <Field field="TotalBathrooms" selected="True" />
+                <Field field="YearBuilt" selected="True" />
+                <Field field="TotalLandValue" selected="True" />
+                <Field field="TotalLandValue1" selected="True" />
+                <Field field="TotalBuildingValue" selected="True" />
+                <Field field="TotalExtraFeaturesValue" selected="True" />
+                <Field field="TotalHeatedAreaSqFt" selected="True" />
+                <Field field="TotalGrossAreaSqFt" selected="True" />
+                <Field field="JustValue" selected="True" />
+                <Field field="AssessedValue" selected="True" />
+                <Field field="TaxableValue" selected="True" />
+                <Field field="LastSaleDate" selected="True" />
+                <Field field="LastSalePrice" selected="True" />
+                <Field field="VacantImproved" selected="True" />
+                <Field field="Qualified" selected="True" />
+                <Field field="Field_45" selected="True" />
+                <Field field="FileName" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PropertyType" size="30" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="V_String" />
+                <Field name="SiteAddress" size="36" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="V_String" />
+                <Field name="SiteCity" size="15" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="V_String" />
+                <Field name="SiteZip" size="10" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="String" />
+                <Field name="Acreage" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Double" />
+                <Field name="Homestead" size="3" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="String" />
+                <Field name="Neighborhood" size="40" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="V_String" />
+                <Field name="TotalNumBuildings" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Byte" />
+                <Field name="TotalUnits" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int16" />
+                <Field name="TotalStories" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Double" />
+                <Field name="TotalBedrooms" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Double" />
+                <Field name="TotalBathrooms" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Double" />
+                <Field name="YearBuilt" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int16" />
+                <Field name="TotalLandValue" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="TotalBuildingValue" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="TotalExtraFeaturesValue" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="TotalHeatedAreaSqFt" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="JustValue" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="AssessedValue" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="TaxableValue" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="LastSaleDate" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Date" />
+                <Field name="LastSalePrice" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="Int32" />
+                <Field name="VacantImproved" size="8" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="String" />
+                <Field name="Qualified" size="11" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\REAL ESTATE DATA\_export_0032176383494a318d6d92dcb8dab9c5.csv" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings>
+            <Position x="775" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">True</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">""</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">False</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">True</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1064" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_5f5beaa9733145b6a9d9552496dcca0e_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+            <Position x="176" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <InputConfiguration>
+                <Configuration>
+                  <Passwords />
+                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="FileName">../Documents/GitHub/SDM_Project_HillsboroughCountyRealestate/HillsboroughCountyData.csv</File>
+                  <FormatSpecificOptions>
+                    <HeaderRow>True</HeaderRow>
+                    <IgnoreErrors>False</IgnoreErrors>
+                    <AllowShareWrite>False</AllowShareWrite>
+                    <ImportLine>1</ImportLine>
+                    <FieldLen>254</FieldLen>
+                    <SingleThreadRead>False</SingleThreadRead>
+                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                    <Delimeter>,</Delimeter>
+                    <QuoteRecordBreak>False</QuoteRecordBreak>
+                    <CodePage>28591</CodePage>
+                  </FormatSpecificOptions>
+                </Configuration>
+              </InputConfiguration>
+              <Mode>ReadList</Mode>
+              <ReadList_Field>FullPath</ReadList_Field>
+              <ReadList_Type>Path</ReadList_Type>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="967" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PropertyType] = "single family"
+OR
+[PropertyType] = "condominium"
+OR
+[PropertyType] = "townhouse"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PropertyType] = "single family"
+OR
+[PropertyType] = "condominium"
+OR
+[PropertyT...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="284" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Folio" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="872" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_123658abf41041f7833ab00f81645111_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="488" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_cf7130f9754245469d2fd353afeba8f6_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="392" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PropertyType" selected="True" />
+                <SelectField field="SiteAddress" selected="True" />
+                <SelectField field="SiteCity" selected="True" />
+                <SelectField field="SiteZip" selected="True" />
+                <SelectField field="Acreage" selected="True" />
+                <SelectField field="Homestead" selected="True" />
+                <SelectField field="Neighborhood" selected="True" />
+                <SelectField field="TotalNumBuildings" selected="True" type="Double" size="8" />
+                <SelectField field="TotalUnits" selected="True" type="Double" size="8" />
+                <SelectField field="TotalStories" selected="True" type="Double" size="8" />
+                <SelectField field="TotalBedrooms" selected="True" type="Double" size="8" />
+                <SelectField field="TotalBathrooms" selected="True" type="Double" size="8" />
+                <SelectField field="YearBuilt" selected="True" type="Double" size="8" />
+                <SelectField field="TotalLandValue" selected="True" type="Int32" size="4" />
+                <SelectField field="TotalBuildingValue" selected="True" type="Double" size="8" />
+                <SelectField field="TotalExtraFeaturesValue" selected="True" type="Double" size="8" />
+                <SelectField field="TotalHeatedAreaSqFt" selected="True" type="Double" size="8" />
+                <SelectField field="TotalGrossAreaSqFt" selected="False" type="Int32" size="4" />
+                <SelectField field="JustValue" selected="True" type="Double" size="8" />
+                <SelectField field="AssessedValue" selected="True" type="Double" size="8" />
+                <SelectField field="TaxableValue" selected="True" type="Double" size="8" />
+                <SelectField field="LastSaleDate" selected="True" type="Date" size="10" />
+                <SelectField field="LastSalePrice" selected="True" type="Double" size="8" />
+                <SelectField field="VacantImproved" selected="True" />
+                <SelectField field="Qualified" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="284" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_ec19ad4eb3a5459fad5a33c3efd591a1_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1062" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression><![CDATA[[VacantImproved] = "Vacant"
+]]></Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[[VacantImproved] = "Vacant"
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="967" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_0a4a41793cfc4963ac9ea9f2bfb9532d_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="872" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>LastSalePrice</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2021-05-02 09:54:32</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>100</Operand>
+                  <StartDate>2021-05-02 09:54:32</StartDate>
+                  <EndDate>2021-05-02 09:54:32</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[LastSalePrice] &gt; 100</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="680" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Left([SiteZip], 5)" field="SiteZip" size="10" type="String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[SiteZip = Left([SiteZip], 5)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_40cd7b7c4dce4385883e52fe607f510b_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="572" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotEmpty</Operator>
+                <Field>SiteZip</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2021-05-02 10:06:56</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2021-05-02 10:06:56</StartDate>
+                  <EndDate>2021-05-02 10:06:56</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsEmpty([SiteZip])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1148" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_1a03815876af4602b1b25058c13d5125_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1170" y="188" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeDiff(Datetimetoday(),[LastSaleDate],&quot;days&quot;)/365" field="YearsSinceTurnover" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[YearsSinceTurnover = DateTimeDiff(Datetimetoday(),[LastSaleDate],"days")/365
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1254" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_54e6b08595f54f318d0b8f8f14da866e_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="403" width="1082" height="297" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>School Performance Data Wrangling</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="523" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">../SDM_Project_HillsboroughCountyRealestate/InputData/HillsboroughCountySchoolGrades.xlsx</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>HillsboroughCountySchoolGrades.xlsx</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="District Number" size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="District Name " size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="School Number " size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="School Name " size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="Grade 2019 " size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="Grade 2018 " size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="Grade 2017 " size="255" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="Percentage of Minority Students " source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Double" />
+                <Field name="Percentage of Economically Disadvanteged Students " source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Double" />
+                <Field name="Zip Code" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="272" y="523" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="School Number " selected="True" />
+                <SelectField field="School Name " selected="True" />
+                <SelectField field="Grade 2019 " selected="True" />
+                <SelectField field="Grade 2018 " selected="True" />
+                <SelectField field="Grade 2017 " selected="True" />
+                <SelectField field="Percentage of Minority Students " selected="True" />
+                <SelectField field="Percentage of Economically Disadvanteged Students " selected="True" />
+                <SelectField field="Zip Code" selected="True" type="String" size="5" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="356" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_a64aa917ac3447e2b64c4ec29711e104_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="548" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_bdd585fd94da42338ed1dc7a545b3e8d_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="464" y="524" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Grade 2017 ] = &quot;A&quot; THEN 4 &#xA;	ELSEIF [Grade 2017 ] = &quot;B&quot; THEN 3 &#xA;	ELSEIF [Grade 2017 ] = &quot;C&quot; THEN 2 &#xA;	ELSEIF [Grade 2017 ] = &quot;D&quot; THEN 1 &#xA;	ELSE 0 &#xA;ENDIF" field="GradePoint2017" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>GradePoint2017 = IF [Grade 2017 ] = "A" THEN 4 
+	ELSEIF [Grade 2017 ] = "B" THEN...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="452" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_39f456bba3a14f65bf1c1c962e64deee_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings>
+            <Position x="368" y="523" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">True</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"School Name "</Value>
+              <Value name="Check Box (84)">False</Value>
+              <Value name="Check Box (117)">False</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">True</Value>
+              <Value name="Drop Down (81)">title</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="176" y="524" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="District Number" selected="True" />
+                <Field field="District Name " selected="True" />
+                <Field field="School Number " selected="True" />
+                <Field field="School Name " selected="True" />
+                <Field field="Grade 2019 " selected="True" />
+                <Field field="Grade 2018 " selected="True" />
+                <Field field="Grade 2017 " selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="District Number" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Byte" />
+                <Field name="District Name " size="12" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="String" />
+                <Field name="School Number " size="4" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="String" />
+                <Field name="School Name " size="67" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="V_String" />
+                <Field name="Grade 2019 " size="1" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="String" />
+                <Field name="Grade 2018 " size="1" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="String" />
+                <Field name="Grade 2017 " size="1" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="String" />
+                <Field name="Percentage of Minority Students " source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Double" />
+                <Field name="Percentage of Economically Disadvanteged Students " source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Double" />
+                <Field name="Zip Code" source="File: C:\Users\erich\Documents\GitHub\SDM_Project_HillsboroughCountyRealestate\InputData\HillsboroughCountySchoolGrades.xlsx" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="260" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_7499afee820e430084c4a98fde968f0d_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="572" y="524" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Grade 2018 ] = &quot;A&quot; THEN 4 &#xA;	ELSEIF [Grade 2018 ] = &quot;B&quot; THEN 3 &#xA;	ELSEIF [Grade 2018 ] = &quot;C&quot; THEN 2 &#xA;	ELSEIF [Grade 2018 ] = &quot;D&quot; THEN 1 &#xA;	ELSE 0 &#xA;ENDIF" field="GradePoint2018" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>GradePoint2018 = IF [Grade 2018 ] = "A" THEN 4 
+	ELSEIF [Grade 2018 ] = "B" THEN...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="656" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_37db1e74f37441b180a0b97b22017b02_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="680" y="524" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Grade 2019 ] = &quot;A&quot; THEN 4 &#xA;	ELSEIF [Grade 2019 ] = &quot;B&quot; THEN 3 &#xA;	ELSEIF [Grade 2019 ] = &quot;C&quot; THEN 2 &#xA;	ELSEIF [Grade 2019 ] = &quot;D&quot; THEN 1 &#xA;	ELSE 0 &#xA;ENDIF" field="GradePoint2019" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>GradePoint2019 = IF [Grade 2019 ] = "A" THEN 4 
+	ELSEIF [Grade 2019 ] = "B" THEN...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="776" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_f10bfdbc015e4107b1dc1085345baefc_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="836" y="524" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Grade 2019 " selected="False" />
+                <SelectField field="Grade 2018 " selected="False" />
+                <SelectField field="Grade 2017 " selected="False" />
+                <SelectField field="GradePoint2017" selected="True" type="Double" size="8" />
+                <SelectField field="GradePoint2018" selected="True" type="Double" size="8" />
+                <SelectField field="GradePoint2019" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="908" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_1f25622c65724d81ab34e3c448b0bab6_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="980" y="524" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Zip Code" action="GroupBy" rename="SchoolZipCodeGroup" />
+                <SummarizeField field="GradePoint2017" action="Avg" rename="Avg_GradePoint2017" />
+                <SummarizeField field="GradePoint2018" action="Avg" rename="Avg_GradePoint2018" />
+                <SummarizeField field="GradePoint2019" action="Avg" rename="Avg_GradePoint2019" />
+                <SummarizeField field="Percentage of Minority Students " action="Avg" rename="Avg_Percentage of Minority Students " />
+                <SummarizeField field="Percentage of Economically Disadvanteged Students " action="Avg" rename="Avg_Percentage of Economically Disadvanteged Students " />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1052" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\erich\AppData\Local\Temp\Engine_17380_839ecbc654de42ae969c818111a5e62f_\Engine_4200_50c20fd786584c75ac4d4cb79bfb0585_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="53" Connection="Join" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Join" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output26" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output26" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Unique" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="False" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="False" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="True" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="True" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="5" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="53" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="53" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="40" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output26" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output26" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Altreryx_HillsCountyData</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
